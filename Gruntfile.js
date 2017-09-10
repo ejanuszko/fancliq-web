@@ -109,7 +109,7 @@ module.exports = function(grunt) {
                         '--exclude node_modules/',
                         '--exclude web/src/',
                         '--exclude Gruntfile.js',
-                        '../fancliq',
+                        '../fancliq-web',
                         'ec2-user@18.221.53.245:/var/www/'
                     ];
                     return commands.join(' ');
