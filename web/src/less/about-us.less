@@ -1,0 +1,101 @@
+.fancliq__about__hero {
+    height: 430px;
+    background: url('images/about-us-hero.jpg') no-repeat top center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fancliq__about__hero__items {
+    padding-top: 120px;
+}
+
+.fancliq__about__hero__item {
+    display: block;
+    font-family: @font-michroma;
+    color: @color-white;
+    font-size: 25px;
+    margin-bottom: 14px;
+    text-align: center;
+
+    @media (min-width: @screen-sm) {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+}
+
+.fancliq__about__body {
+    text-align: center;
+    padding: 35px 20px 0;
+    position: relative;
+    z-index: 10;
+
+    @media (min-width: @screen-sm) {
+        padding: 35px 0 0;
+    }
+}
+
+.fancliq__about__header {
+    font-family: @font-good-times;
+    font-size: 36px;
+    color: @color-dark-gray;
+
+    @media (min-width: @screen-sm) {
+        font-size: 46px;
+    }
+}
+
+.fancliq__about__item {
+    margin-top: 25px;
+    font-family: @font-montserrat;
+    font-size: 16px;
+    line-height: 26px;
+    color: @color-black;
+
+    @media (min-width: @screen-sm) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+.fancliq__about__footer {
+    position: relative;
+    display: flex;
+    height: 230px;
+
+    @media (min-width: @screen-sm) {
+        height: 380px;
+    }
+}
+
+.fancliq__about__footer__camera {
+    @media (min-width: @screen-sm) {
+        flex: 1;
+    }
+}
+
+.fancliq__about__camera__icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 400px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @media (min-width: @screen-sm) {
+        height: 540px;
+    }
+}
+
+.fancliq__about__footer__button {
+    flex: 1;
+    text-align: center;
+    padding-top: 20px;
+
+    @media (min-width: @screen-sm) {
+        padding-top: 110px;
+    }
+}

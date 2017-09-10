@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'good_timesregular';
+    src: url('./fonts/good_times_rg-webfont.woff2') format('woff2'),
+    url('./fonts/good_times_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

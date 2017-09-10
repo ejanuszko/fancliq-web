@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Michroma|Montserrat:300,400|Nunito:200" />
+    <link rel="stylesheet" href="dist/app.min.css" />
+</head>
+<body class="fancliq">
+    <div class="fancliq__content-area">
+        <div class="fancliq__header">
+            <div class="fancliq__header_logo__container">
+                <div class="fancliq__header_logo icon-layout-logo"></div>
+            </div>
+            <nav class="fancliq__header__nav">
+                <a href="{{configs.pages.home.url}}" class="fancliq__header__nav__item">
+                    Home
+                </a>
+                <a href="{{configs.pages.about.url}}" class="fancliq__header__nav__item">
+                    About
+                </a>
+                <a href="{{configs.pages.contact.url}}" class="fancliq__header__nav__item">
+                    Contact
+                </a>
+                <a href="{{configs.pages.register.url}}" class="fancliq__header__nav__item">
+                    Register
+                </a>
+                <a href="{{configs.pages.login.url}}" class="fancliq__header__nav__item">
+                    Login
+                </a>
+            </nav>
+        </div>
+        <div class="fancliq__body">
+{{{body}}}
+        </div>
+        <footer class="fancliq__footer">
+            <div class="fancliq__footer__content">
+                <div class="fancliq__footer__content__column">
+                    <h4 class="fancliq__footer__links-header">
+                        Useful Links:
+                    </h4>
+                    <ul class="fancliq__footer__links">
+                        <li class="fancliq__footer__links__item">
+                            <a href="{{configs.pages.home.url}}" class="fancliq__footer__links__item__link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="fancliq__footer__links__item">
+                            <a href="{{configs.pages.about.url}}" class="fancliq__footer__links__item__link">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="fancliq__footer__links__item">
+                            <a href="{{configs.pages.contact.url}}" class="fancliq__footer__links__item__link">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="fancliq__footer__links__item">
+                            <a href="{{configs.pages.register.url}}" class="fancliq__footer__links__item__link">
+                                Register/Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fancliq__footer__content__column fancliq__footer__content__column--contact">
+                    <div class="fancliq__footer__contact-header">
+                        Have a question? Have some feedback?
+                    </div>
+                    <div class="fancliq__footer__contact-icon icon-layout-email"></div>
+                    <a href="{{configs.pages.contact.url}}" class="fancliq__footer__contact-link">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="fancliq__footer__copyright">
+                Copyright &copy; 2017 All Rights Reserved | <a href="{{configs.pages.privacy_policy.url}}" class="fancliq__footer__copyright__link">Privacy Policy</a> | <a href="{{configs.pages.terms.url}}" class="fancliq__footer__copyright__link">Terms of Use</a>
+            </div>
+            <div class="fancliq__footer__grass icon-layout-grass"></div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form#fancliq__contact__form').on('submit', function(e) {
+                e.preventDefault();
+                var $name = $('input[name="name"]'),
+                    $email = $('input[name="email"]'),
+                    $message = $('textarea[name="message"]'),
+                    $error = $('#fancliq__contact__error'),
+                    $success = $('#fancliq__contact__success');
+
+                $error.css('display', 'none');
+                $success.css('display', 'none');
+
+                if (!$name.val() || !$email.val() || !$message.val()) {
+                    $error.css('display', 'block');
+                    return;
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'contact',
+                    data: JSON.stringify({ name: $name.val(), email: $email.val(), message: $message.val() }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function(data) {
+                        $success.css('display', 'block');
+                        $name.val('');
+                        $email.val('');
+                        $message.val('');
+                    },
+                    failure: function(error) {
+
+                    }
+                });
+            })
+        });
+    </script>
+</body>
+</html>

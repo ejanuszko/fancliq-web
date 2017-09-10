@@ -1,0 +1,72 @@
+@button-border: 3px;
+
+.fancliq__primary-button {
+    border-radius: 6px;
+    border-width: 0;
+    background: rgb(70,223,233);
+    background: -moz-linear-gradient(left, rgba(70,223,233,1) 0%, rgba(45,232,177,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(70,223,233,1) 0%,rgba(45,232,177,1) 100%);
+    background: linear-gradient(to right, rgba(70,223,233,1) 0%,rgba(45,232,177,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46dfe9', endColorstr='#2de8b1',GradientType=1 );
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+
+    &&:before {
+        content: '';
+        position: absolute;
+        top: @button-border;
+        left: @button-border;
+        bottom: @button-border;
+        right: @button-border;
+        background-color: @color-white;
+        z-index: 1;
+        border-radius: 4px;
+    }
+    
+    &:hover {
+        &&:before {
+            display: none;
+        }
+        .fancliq__primary-button__text {
+            background: none;
+            color: @color-white;
+        }
+    }
+
+    &--small {
+
+        &&:before {
+            top: 2px;
+            left: 2px;
+            bottom: 2px;
+            right: 2px;
+        }
+
+        .fancliq__primary-button__text {
+            font-size: 18px;
+            padding: 10px 30px;
+            min-width: 0;
+        }
+    }
+}
+
+.fancliq__primary-button__text {
+    font-family: @font-montserrat;
+    font-weight: 300;
+    font-size: 34px;
+    background: rgb(70,223,233);
+    background: -moz-linear-gradient(left, rgba(70,223,233,1) 0%, rgba(45,232,177,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(70,223,233,1) 0%,rgba(45,232,177,1) 100%);
+    background: linear-gradient(to right, rgba(70,223,233,1) 0%,rgba(45,232,177,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46dfe9', endColorstr='#2de8b1',GradientType=1 );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: 10px 30px;
+    min-width: 220px;
+}

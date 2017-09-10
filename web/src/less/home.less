@@ -1,0 +1,191 @@
+@image-column-width: 300px;
+
+.fancliq__home {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.fancliq__home__content-item {
+    @media (min-width: @screen-sm) {
+        padding-left: @image-column-width;
+    }
+}
+
+.fancliq__home__images {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @image-column-width;
+    text-align: center;
+    padding-top: 150px;
+    z-index: 2;
+
+    @media (min-width: @screen-sm) {
+        display: block;
+    }
+}
+
+.fancliq__home__images__item-content {
+    border: 8px solid @color-white;
+    box-shadow: 0 5px 20px 4px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 auto 30px;
+}
+
+.fancliq__home__images__item__image {
+    display: block;
+}
+
+.fancliq__home__banner {
+    position: relative;
+    background-color: @color-off-white;
+}
+
+.fancliq__home__banner__content {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    @media (min-width: @screen-sm) {
+        padding-top: 185px;
+        padding-bottom: 160px;
+    }
+}
+
+.fancliq__home__banner__button {
+    text-align: center;
+    padding-bottom: 40px;
+
+    @media (min-width: @screen-sm) {
+        padding-bottom: 20px;
+    }
+}
+
+.fancliq__home__banner__content-item {
+    font-family: @font-michroma;
+    font-size: 25px;
+    color: @color-dark-gray;
+    line-height: 50px;
+    margin-top: 20px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @media (min-width: @screen-sm) {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+}
+
+.fancliq__home__banner__image {
+    position: absolute;
+    z-index: 1;
+    display: none;
+
+    @media (min-width: @screen-sm) {
+        display: block;
+    }
+}
+
+.fancliq__home__banner__image--camera {
+    top: 30%;
+    left: 0;
+}
+
+.fancliq__home__banner__image--soccer-ball {
+    bottom: 0;
+    right: 0;
+}
+
+.fancliq__home__banner__grass {
+    width: auto;
+}
+
+.fancliq__home__header {
+    font-family: @font-good-times;
+    color: @color-dark-gray;
+    font-size: 36px;
+    text-align: center;
+
+    @media (min-width: @screen-sm) {
+        font-size: 46px;
+        text-align: left;
+        padding-left: 30px;
+    }
+}
+
+.fancliq__home__section {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: -moz-linear-gradient(left, rgba(190,190,190,0) 0%, rgba(190,190,190,1) 50%, rgba(190,190,190,0) 100%);
+        background: -webkit-linear-gradient(left, rgba(190,190,190,0) 0%,rgba(190,190,190,1) 50%,rgba(190,190,190,0) 100%);
+        background: linear-gradient(to right, rgba(190,190,190,0) 0%,rgba(190,190,190,1) 50%,rgba(190,190,190,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bebebe', endColorstr='#00bebebe',GradientType=1 );
+    }
+    
+    &--first {
+        padding-top: 0;
+        &:after {
+            display: none;
+        }
+    }
+
+    @media (min-width: @screen-sm) {
+        padding: 50px 30px;
+    }
+}
+
+.fancliq__home__section__icon {
+    display: none;
+
+    @media (min-width: @screen-sm) {
+        display: block;
+    }
+}
+
+.fancliq__home__section__content {
+    flex: 1;
+
+    @media (min-width: @screen-sm) {
+        padding-right: 50px;
+    }
+}
+
+.fancliq__home__section__header {
+    font-family: @font-michroma;
+    font-size: 25px;
+    line-height: 30px;
+    color: @color-dark-gray;
+
+    @media (min-width: @screen-sm) {
+        font-size: 35px;
+        line-height: 50px;
+    }
+}
+
+.fancliq__home__section__description {
+    font-family: @font-montserrat;
+    font-size: 20px;
+    line-height: 25px;
+    color: @color-dark-gray;
+
+    @media (min-width: @screen-sm) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}

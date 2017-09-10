@@ -1,0 +1,37 @@
+{
+  "name": "fancliq",
+  "version": "1.0.0",
+  "description": "Repo for Fancliq application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPodz/fancliq.git"
+  },
+  "author": "justin.podzimek@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPodz/fancliq/issues"
+  },
+  "homepage": "https://github.com/JPodz/fancliq#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.1.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^3.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-spritesmith": "^6.4.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}
