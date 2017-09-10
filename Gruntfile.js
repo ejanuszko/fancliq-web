@@ -120,7 +120,7 @@ module.exports = function(grunt) {
                     let commands = [
                         'ssh -i ' + grunt.option('key'),
                         'ec2-user@18.221.53.245',
-                        '"cd /var/www/fancliq; npm install --force; forever restartall;"'
+                        '"cd /var/www/fancliq-web; npm install --force; forever restartall;"'
                     ];
                     return commands.join(' ');
                 }
