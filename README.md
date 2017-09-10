@@ -7,8 +7,8 @@
 
 ### Download and Install
 ```bash
-$ git clone git@github.com:JPodz/fancliq.git
-$ cd fancliq
+$ git clone git@github.com:ejanuszko/fancliq-web.git
+$ cd fancliq-web
 $ npm install
 ```
 
