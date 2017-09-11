@@ -4,9 +4,9 @@ let express = require('express'),
     path = require('path'),
     app = express(),
     sgMail = require('@sendgrid/mail'),
-    configs = require('./config.json');
+    configs = require('/etc/fancliq/config.json');
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(configs.sendgrid.apikey);
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main', layoutsDir: path.join(__dirname, 'web/dist/views/layouts') }));
 
