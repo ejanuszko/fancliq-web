@@ -20,7 +20,7 @@ app.get('/', (req, res) => res.render('home', { title: configs.pages.home.title,
 app.get('/about', (req, res) => res.render('about', { title: configs.pages.about.title, configs: configs }) );
 app.get('/contact', (req, res) => res.render('contact', { title: configs.pages.contact.title, configs: configs }) );
 app.get('/privacy-policy', (req, res) => res.render('privacy-policy', { title: configs.pages.privacy_policy.title, configs: configs }) );
-app.get('/terms', (req, res) => res.render('terms-of-use', { title: configs.pages.terms.title, configs: configs }) );
+app.get('/terms-of-use', (req, res) => res.render('terms-of-use', { title: configs.pages.terms.title, configs: configs }) );
 
 app.post('/contact', (req, res) => {
     let name = req.body.name,
